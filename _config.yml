@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Personal website of Ali Husain (A. A. Husain)"
+title                    : "Personal site of Ali Husain"
 title_separator          : "-"
 name                     : &name "Ali Abdullah Husain"
 description              : &description "personal description"
