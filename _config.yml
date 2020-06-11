@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ali Abdullah Husain (aahusain)"
+title                    : "Ali Husain (aahusain)"
 title_separator          : "-"
 name                     : &name "Ali Abdullah Husain"
 description              : &description "personal description"
@@ -83,7 +83,7 @@ author:
   name             : "Ali Husain"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
-  location         : "Urbana, IL"
+  location         : "Urbana, IL, USA"
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=y80hcYYAAAAJ"
