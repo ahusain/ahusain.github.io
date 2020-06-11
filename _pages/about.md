@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Quantum correlations in space and time"
+title: "Ali Husain — Quantum correlations in space and time"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
