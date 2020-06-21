@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Personal site of Ali A. Husain"
+title                    : "Ali Husain"
 title_separator          : "-"
 name                     : &name "Ali Abdullah Husain"
 description              : &description "personal description"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "About me"
+  name             : "Ali A. Husain"
   avatar           : "density_response_v2.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Urbana, IL, USA"
