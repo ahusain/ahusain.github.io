@@ -11,7 +11,7 @@ title                    : "Ali Husain"
 title_separator          : "-"
 name                     : &name "Ali Abdullah Husain"
 description              : &description "personal description"
-url                      : https://www.aahusain.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://www.aahusain.com  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ahusain/ahusain.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -83,11 +83,11 @@ author:
   name             : "Ali A. Husain"
   avatar           : "density_response_v2.png"
   bio              : "Your biography for the left-hand sidebar"
-  location         : "Urbana, IL, USA"
-  employer         : "University of Illinois"
+  location         : "Vancouver, BC, Canada"
+  employer         : "University of British Columbia"
   #pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=y80hcYYAAAAJ"
-  email            : "ahusain6 [AT] illinois [DOT] edu"
+  email            : "ali.husain [AT] ubc [DOT] ca"
   #researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   #uri              :
   #bitbucket        :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   #lastfm           :
   linkedin         : "https://www.linkedin.com/in/ali-husain-a82b858a/"
-  orcid            : "https://orcid.org/0000-0001-9865-9476"
+  orcid            : #"https://orcid.org/0000-0001-9865-9476"
   #pinterest        :
   #soundcloud       :
   #stackoverflow    : # https://stackoverflow.com/users/123456/username
