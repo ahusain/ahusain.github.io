@@ -12,6 +12,7 @@ Below is a simple calculator to go between electron beam energies, angles, and m
 
 Conversion Table
 ======
-<div id="html" markdown="0">
+{% capture includeGuts %}
 {% include electron-conversion-table.html %}
-</div>
+{% endcapture %}
+{{ includeGuts | replace: '    ', ''}}
