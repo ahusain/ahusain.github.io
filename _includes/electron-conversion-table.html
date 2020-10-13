@@ -1,43 +1,44 @@
-<!DOCTYPE html>
-<html><body dir="ltr"><font face="arial">
-<table style="border-width:1px" cellpadding="2" bordercolor="#CCCCCC" align="center">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<table style="border-width:0px" cellpadding="1" bordercolor="black" align="center">
 <form name="conversion">
 <tbody>
 <tr>
-<td colspan="1" class="label">Incident e-Beam</td> 
-<td colspan="1" class="label">Momentum Transfer</td>
-<td colspan="1" class="label">Lattice Parameter</td>
-</tr>
+<td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Incident e-Beam</b></span></td> 
+<td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Momentum Transfer</b></span></td>
+<td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Lattice Parameter</b></span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="keV" onkeyup="keVconvert()" size="8" value="80.00"> keV </span></td>
-<td><span style="font-size:10pt"><input name="mrad" onkeyup="mradconvert()" size="8" value="0.500"> mrad </span></td>
-<td><span style="font-size:10pt"><input name="alatt" onkeyup="alattconvert()" size="8" value="3.81"> Å </span></td>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="keV" onkeyup="keVconvert()" size="8" style="width: 100px;" value="80.00"> keV </span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="mrad" onkeyup="mradconvert()" size="8" style="width: 100px;" value="0.500"> mrad </span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="alatt" onkeyup="alattconvert()" size="8" style="width: 100px;" value="3.81"> Å </span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="kPhys" onkeyup="kPhysconvert()" size="8" value="150.47"> Å<sup>-1</sup> (k<sub>i</sub> = 2π/λ) </span></td>
-<td><span style="font-size:10pt"><input name="qPhys" onkeyup="qPhysconvert()" size="8" value="0.07523"> Å<sup>-1</sup> (q = 2π/λ) </span></td>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="kPhys" onkeyup="kPhysconvert()" size="8" style="width: 100px;" value="150.47"> Å<sup>-1</sup> (k<sub>i</sub> = 2π/λ) </span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="qPhys" onkeyup="qPhysconvert()" size="8" style="width: 100px;" value="0.07523"> Å<sup>-1</sup> (q = 2π/λ) </span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="kCrys" onkeyup="kCrysconvert()" size="8" value="23.948"> Å<sup>-1</sup> (k<sub>i</sub> = 1/λ) </span></td>
-<td><span style="font-size:10pt"><input name="qCrys" onkeyup="qCrysconvert()" size="8" value="0.01197"> Å<sup>-1</sup> (q = 1/λ) </span></td>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="kCrys" onkeyup="kCrysconvert()" size="8" style="width: 100px;" value="23.948"> Å<sup>-1</sup> (k<sub>i</sub> = 1/λ) </span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="qCrys" onkeyup="qCrysconvert()" size="8" style="width: 100px;" value="0.01197"> Å<sup>-1</sup> (q = 1/λ) </span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="kAng" onkeyup="kAngconvert()" size="8" value="0.04176"> Å (λ) </span>
-<td><span style="font-size:10pt"><input name="qAng" onkeyup="qAngconvert()" size="8" value="83.520"> Å (λ)</span>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="kAng" onkeyup="kAngconvert()" size="8" style="width: 100px;" value="0.04176"> Å (λ) </span>
+<td style="border: none;"><span style="font-size:12pt"><input name="qAng" onkeyup="qAngconvert()" size="8" style="width: 100px;" value="83.520"> Å (λ)</span>
+
 <tr>
-<td><span style="font-size:10pt"><input name="kpm" onkeyup="kpmconvert()" size="8" value="4.1760"> pm (λ)</span>
-<td><span style="font-size:10pt"><input name="qnm" onkeyup="qnmconvert()" size="8" value="835.20"> nm (λ)</span></td>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="kpm" onkeyup="kpmconvert()" size="8" style="width: 100px;" value="4.1760"> pm (λ)</span>
+<td style="border: none;"><span style="font-size:12pt"><input name="qnm" onkeyup="qnmconvert()" size="8" style="width: 100px;" value="8.3520"> nm (λ)</span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="beta" onkeyup="betaconvert()" size="8" value="0.50237"> β = v/c</span></td>
-<td><span style="font-size:10pt"><input name="qrlu" onkeyup="qrluconvert()" size="8" value="0.04562"> r.l.u</span></td>
-</tr>
+<td style="border: none;"><span style="font-size:12pt"><input name="beta" onkeyup="betaconvert()" size="8" style="width: 100px;" value="0.50237"> β = v/c</span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="qrlu" onkeyup="qrluconvert()" size="8" style="width: 100px;" value="0.04562"> r.l.u</span></td>
+
 <tr>
-<td><span style="font-size:10pt"><input name="gamma" onkeyup="gammaconvert()" size="8" value="1.15653"> γ</span></td>
-</tr>
-</tbody>
-</form>
+<td style="border: none;"><span style="font-size:12pt"><input name="gamma" onkeyup="gammaconvert()" size="8" style="width: 100px;" value="1.15653"> γ</span></td>
+
 <script>
 c=299792458;
 h=4.135667516e-15;
@@ -232,7 +233,7 @@ with (document.conversion){
 qPhys.value = kPhys.value*mrad.value*(1e-3)
 qCrys.value = kCrys.value*mrad.value*(1e-3)
 qAng.value  = 1.00/qCrys.value
-qnm.value   = 10*qAng.value 
+qnm.value   = qAng.value /10.0
 qrlu.value = alatt.value/qAng.value
 qPhys.value = roundfive(qPhys.value)
 qCrys.value = roundfive(qCrys.value)
@@ -246,7 +247,7 @@ with (document.conversion){
 mrad.value = (1e3)*qPhys.value/kPhys.value
 qCrys.value = kCrys.value*mrad.value*(1e-3)
 qAng.value  = 1.00/qCrys.value
-qnm.value   = 10*qAng.value 
+qnm.value   = qAng.value /10.0
 qrlu.value = alatt.value/qAng.value
 mrad.value  = roundfive(mrad.value)
 qCrys.value = roundfive(qCrys.value)
@@ -260,7 +261,7 @@ with (document.conversion){
 mrad.value = (1e3)*qCrys.value/kCrys.value
 qPhys.value = kPhys.value*mrad.value*(1e-3)
 qAng.value  = 1.00/qCrys.value
-qnm.value   = 10*qAng.value 
+qnm.value   = qAng.value /10.0 
 qrlu.value = alatt.value/qAng.value
 mrad.value  = roundfive(mrad.value)
 qPhys.value = roundfive(qPhys.value)
@@ -274,7 +275,7 @@ with (document.conversion){
 qCrys.value = 1.00/qAng.value
 mrad.value  = (1e3)*qCrys.value/kCrys.value
 qPhys.value = kPhys.value*mrad.value*(1e-3)
-qnm.value   = 10*qAng.value 
+qnm.value   = qAng.value /10.0
 qrlu.value  = alatt.value/qAng.value
 mrad.value  = roundfive(mrad.value)
 qPhys.value = roundfive(qPhys.value)
@@ -285,7 +286,7 @@ alatt.value = roundfive(alatt.value)
 }}
 function qnmconvert(){
 with (document.conversion){
-qAng.value  = qnm.value/10.0
+qAng.value  = qnm.value*10.0
 qCrys.value = 1.00/qAng.value
 mrad.value  = (1e3)*qCrys.value/kCrys.value
 qPhys.value = kPhys.value*mrad.value*(1e-3)
@@ -303,7 +304,7 @@ qAng.value  = alatt.value/qrlu.value
 qCrys.value = 1.00/qAng.value
 mrad.value  = (1e3)*qCrys.value/kCrys.value
 qPhys.value = kPhys.value*mrad.value*(1e-3)
-qnm.value   = 10*qAng.value 
+qnm.value   = qAng.value /10.0
 mrad.value  = roundfive(mrad.value)
 qPhys.value = roundfive(qPhys.value)
 qCrys.value = roundfive(qCrys.value)
@@ -321,5 +322,3 @@ qnm.value   = roundfive(qnm.value)
 qrlu.value  = roundfive(qrlu.value)
 }}
 </script>
-</font>
-</body></html>
