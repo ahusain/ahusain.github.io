@@ -47,280 +47,280 @@ hc=1.97326963; /* hbar*c in keV*Angstrom */
 mc2=510.99891; /* mc^2 of electron in keV */
 PI=Math.PI;
 function roundfive(num){
-round = (Math.round(num*100000))/100000
+round = (Math.round(num*100000))/100000;
 /* round = Math.round((num + 0.001) * 100000) / 100000 */
 return (+round.toFixed(5))
 }
 function roundall(){
 with (document.conversion){
-keV.value   = roundfive(keV.value)
-kPhys.value = roundfive(kPhys.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+keV.value   = roundfive(keV.value);
+kPhys.value = roundfive(kPhys.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value  = roundfive(kAng.value);
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function keVconvert(){
 with (document.conversion){
-kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value)
-kCrys.value = kPhys.value/(2*PI)
-kAng.value  = 1.00/kCrys.value
-kpm.value   = 100*kAng.value
-gamma.value = (keV.value/mc2)+1.00
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-kPhys.value = roundfive(kPhys.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value);
+kCrys.value = kPhys.value/(2*PI);
+kAng.value  = 1.00/kCrys.value;
+kpm.value   = 100*kAng.value;
+gamma.value = (keV.value/mc2)+1.00;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+kPhys.value = roundfive(kPhys.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value  = roundfive(kAng.value );
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function kPhysconvert(){
 with (document.conversion){
-keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2
-kCrys.value = kPhys.value/(2*PI)
-kAng.value  = 1.00/kCrys.value
-kpm.value   = 100*kAng.value
-gamma.value = (keV.value/mc2)+1.00
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-keV.value   = roundfive(keV.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2;
+kCrys.value = kPhys.value/(2*PI);
+kAng.value  = 1.00/kCrys.value;
+kpm.value   = 100*kAng.value;
+gamma.value = (keV.value/mc2)+1.00;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+keV.value   = roundfive(keV.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value  = roundfive(kAng.value);
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function kCrysconvert(){
 with (document.conversion){
-kPhys.value = 2*PI*kCrys.value
-keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2
-kAng.value  = 1.00/kCrys.value
-kpm.value   = 100*kAng.value
-gamma.value = (keV.value/mc2)+1.00
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-keV.value   = roundfive(keV.value)
-kPhys.value = roundfive(kPhys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+kPhys.value = 2*PI*kCrys.value;
+keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2;
+kAng.value  = 1.00/kCrys.value;
+kpm.value   = 100*kAng.value;
+gamma.value = (keV.value/mc2)+1.00;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+keV.value   = roundfive(keV.value);
+kPhys.value = roundfive(kPhys.value);
+kAng.value  = roundfive(kAng.value);
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function kAngconvert(){
 with (document.conversion){
-kCrys.value = 1.00/kAng.value
-kPhys.value = 2*PI*kCrys.value
-keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2
-kpm.value   = 100*kAng.value
-gamma.value = (keV.value/mc2)+1.00
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-keV.value   = roundfive(keV.value)
-kPhys.value = roundfive(kPhys.value)
-kCrys.value = roundfive(kCrys.value)
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+kCrys.value = 1.00/kAng.value;
+kPhys.value = 2*PI*kCrys.value;
+keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2;
+kpm.value   = 100*kAng.value;
+gamma.value = (keV.value/mc2)+1.00;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+keV.value   = roundfive(keV.value);
+kPhys.value = roundfive(kPhys.value);
+kCrys.value = roundfive(kCrys.value);
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function kpmconvert(){
 with (document.conversion){
-kAng.value = kpm.value/100.00
-kCrys.value = 1.00/kAng.value
-kPhys.value = 2*PI*kCrys.value
-keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2
-gamma.value = (keV.value/mc2)+1.00
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-keV.value   = roundfive(keV.value)
-kPhys.value = roundfive(kPhys.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value   = roundfive(kAng.value)
-gamma.value = roundfive(gamma.value)
-beta.value  = roundfive(beta.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+kAng.value = kpm.value/100.00;
+kCrys.value = 1.00/kAng.value;
+kPhys.value = 2*PI*kCrys.value;
+keV.value = Math.sqrt(mc2*mc2+(hc*kPhys.value)*(hc*kPhys.value)) - mc2;
+gamma.value = (keV.value/mc2)+1.00;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+keV.value   = roundfive(keV.value);
+kPhys.value = roundfive(kPhys.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value   = roundfive(kAng.value);
+gamma.value = roundfive(gamma.value);
+beta.value  = roundfive(beta.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function gammaconvert(){
 with (document.conversion){
-keV.value   = (gamma.value -1)*mc2
-kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value)
-kCrys.value = kPhys.value/(2*PI)
-kAng.value  = 1.00/kCrys.value
-kpm.value   = 100*kAng.value
-beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value)
-mradconvert()
-keV.value   = roundfive(keV.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-beta.value  = roundfive(beta.value)
-kPhys.value = roundfive(kPhys.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+keV.value   = (gamma.value -1)*mc2;
+kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value);
+kCrys.value = kPhys.value/(2*PI);
+kAng.value  = 1.00/kCrys.value;
+kpm.value   = 100*kAng.value;
+beta.value  = Math.sqrt(gamma.value*gamma.value - 1)/(gamma.value);
+mradconvert();
+keV.value   = roundfive(keV.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value  = roundfive(kAng.value);
+kpm.value   = roundfive(kpm.value);
+beta.value  = roundfive(beta.value);
+kPhys.value = roundfive(kPhys.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function betaconvert(){
 with (document.conversion){
-gamma.value  = Math.sqrt(1.0/(1-beta.value*beta.value))
-keV.value   = (gamma.value -1)*mc2
-kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value)
-kCrys.value = kPhys.value/(2*PI)
-kAng.value  = 1.00/kCrys.value
-kpm.value   = 100*kAng.value
-mradconvert()
-keV.value   = roundfive(keV.value)
-kCrys.value = roundfive(kCrys.value)
-kAng.value  = roundfive(kAng.value )
-kpm.value   = roundfive(kpm.value)
-gamma.value = roundfive(gamma.value)
-kPhys.value = roundfive(kPhys.value)
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+gamma.value  = Math.sqrt(1.0/(1-beta.value*beta.value));
+keV.value   = (gamma.value -1)*mc2;
+kPhys.value = (1.0/hc)*Math.sqrt(keV.value*keV.value + 2*mc2*keV.value);
+kCrys.value = kPhys.value/(2*PI);
+kAng.value  = 1.00/kCrys.value;
+kpm.value   = 100*kAng.value;
+mradconvert();
+keV.value   = roundfive(keV.value);
+kCrys.value = roundfive(kCrys.value);
+kAng.value  = roundfive(kAng.value);
+kpm.value   = roundfive(kpm.value);
+gamma.value = roundfive(gamma.value);
+kPhys.value = roundfive(kPhys.value);
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function mradconvert(){
 with (document.conversion){
-qPhys.value = kPhys.value*mrad.value*(1e-3)
-qCrys.value = kCrys.value*mrad.value*(1e-3)
-qAng.value  = 1.00/qCrys.value
-qnm.value   = qAng.value /10.0
-qrlu.value = alatt.value/qAng.value
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+qPhys.value = kPhys.value*mrad.value*(1e-3);
+qCrys.value = kCrys.value*mrad.value*(1e-3);
+qAng.value  = 1.00/qCrys.value;
+qnm.value   = qAng.value /10.0;
+qrlu.value = alatt.value/qAng.value;
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function qPhysconvert(){
 with (document.conversion){
-mrad.value = (1e3)*qPhys.value/kPhys.value
-qCrys.value = kCrys.value*mrad.value*(1e-3)
-qAng.value  = 1.00/qCrys.value
-qnm.value   = qAng.value /10.0
-qrlu.value = alatt.value/qAng.value
-mrad.value  = roundfive(mrad.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+mrad.value = (1e3)*qPhys.value/kPhys.value;
+qCrys.value = kCrys.value*mrad.value*(1e-3);
+qAng.value  = 1.00/qCrys.value;
+qnm.value   = qAng.value /10.0;
+qrlu.value = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function qCrysconvert(){
 with (document.conversion){
-mrad.value = (1e3)*qCrys.value/kCrys.value
-qPhys.value = kPhys.value*mrad.value*(1e-3)
-qAng.value  = 1.00/qCrys.value
-qnm.value   = qAng.value /10.0 
-qrlu.value = alatt.value/qAng.value
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+mrad.value = (1e3)*qCrys.value/kCrys.value;
+qPhys.value = kPhys.value*mrad.value*(1e-3);
+qAng.value  = 1.00/qCrys.value;
+qnm.value   = qAng.value /10.0;
+qrlu.value = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function qAngconvert(){
 with (document.conversion){
-qCrys.value = 1.00/qAng.value
-mrad.value  = (1e3)*qCrys.value/kCrys.value
-qPhys.value = kPhys.value*mrad.value*(1e-3)
-qnm.value   = qAng.value /10.0
-qrlu.value  = alatt.value/qAng.value
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+qCrys.value = 1.00/qAng.value;
+mrad.value  = (1e3)*qCrys.value/kCrys.value;
+qPhys.value = kPhys.value*mrad.value*(1e-3);
+qnm.value   = qAng.value /10.0;
+qrlu.value  = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function qnmconvert(){
 with (document.conversion){
-qAng.value  = qnm.value*10.0
-qCrys.value = 1.00/qAng.value
-mrad.value  = (1e3)*qCrys.value/kCrys.value
-qPhys.value = kPhys.value*mrad.value*(1e-3)
-qrlu.value  = alatt.value/qAng.value
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qrlu.value  = roundfive(qrlu.value)
-alatt.value = roundfive(alatt.value)
+qAng.value  = qnm.value*10.0;
+qCrys.value = 1.00/qAng.value;
+mrad.value  = (1e3)*qCrys.value/kCrys.value;
+qPhys.value = kPhys.value*mrad.value*(1e-3);
+qrlu.value  = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 function qrluconvert(){
 with (document.conversion){
-qAng.value  = alatt.value/qrlu.value
-qCrys.value = 1.00/qAng.value
-mrad.value  = (1e3)*qCrys.value/kCrys.value
-qPhys.value = kPhys.value*mrad.value*(1e-3)
-qnm.value   = qAng.value /10.0
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
+qAng.value  = alatt.value/qrlu.value;
+qCrys.value = 1.00/qAng.value;
+mrad.value  = (1e3)*qCrys.value/kCrys.value;
+qPhys.value = kPhys.value*mrad.value*(1e-3);
+qnm.value   = qAng.value /10.0;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
 }}
 function alattconvert(){
 with (document.conversion){
-qrlu.value  = alatt.value/qAng.value
-mrad.value  = roundfive(mrad.value)
-qPhys.value = roundfive(qPhys.value)
-qCrys.value = roundfive(qCrys.value)
-qAng.value  = roundfive(qAng.value)
-qnm.value   = roundfive(qnm.value)
-qrlu.value  = roundfive(qrlu.value)
+qrlu.value  = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
 }}
 </script>
 </table></body></html>
