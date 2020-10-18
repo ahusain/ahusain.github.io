@@ -231,8 +231,8 @@ alatt.value = roundfive(alatt.value);
 }}
 function mradconvert(){
 with (document.conversion){
-qPhys.value = kPhys.value*mrad.value*(1e-3);
-qCrys.value = kCrys.value*mrad.value*(1e-3);
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
+qCrys.value = kCrys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
@@ -245,8 +245,8 @@ alatt.value = roundfive(alatt.value);
 }}
 function qPhysconvert(){
 with (document.conversion){
-mrad.value = (1e3)*qPhys.value/kPhys.value;
-qCrys.value = kCrys.value*mrad.value*(1e-3);
+mrad.value = (1e3)*2*Math.asin(0.5*qPhys.value/kPhys.value);
+qCrys.value = kCrys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
@@ -259,8 +259,8 @@ alatt.value = roundfive(alatt.value);
 }}
 function qCrysconvert(){
 with (document.conversion){
-mrad.value = (1e3)*qCrys.value/kCrys.value;
-qPhys.value = kPhys.value*mrad.value*(1e-3);
+mrad.value = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
@@ -274,8 +274,8 @@ alatt.value = roundfive(alatt.value);
 function qAngconvert(){
 with (document.conversion){
 qCrys.value = 1.00/qAng.value;
-mrad.value  = (1e3)*qCrys.value/kCrys.value;
-qPhys.value = kPhys.value*mrad.value*(1e-3);
+mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qnm.value   = qAng.value /10.0;
 qrlu.value  = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
@@ -289,8 +289,8 @@ function qnmconvert(){
 with (document.conversion){
 qAng.value  = qnm.value*10.0;
 qCrys.value = 1.00/qAng.value;
-mrad.value  = (1e3)*qCrys.value/kCrys.value;
-qPhys.value = kPhys.value*mrad.value*(1e-3);
+mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qrlu.value  = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
 qPhys.value = roundfive(qPhys.value);
@@ -303,8 +303,8 @@ function qrluconvert(){
 with (document.conversion){
 qAng.value  = alatt.value/qrlu.value;
 qCrys.value = 1.00/qAng.value;
-mrad.value  = (1e3)*qCrys.value/kCrys.value;
-qPhys.value = kPhys.value*mrad.value*(1e-3);
+mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qnm.value   = qAng.value /10.0;
 mrad.value  = roundfive(mrad.value);
 qPhys.value = roundfive(qPhys.value);
