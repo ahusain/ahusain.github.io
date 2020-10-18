@@ -34,10 +34,11 @@
 </tr>
 <tr>
 <td style="border: none;"><span style="font-size:12pt"><input name="beta" onkeyup="betaconvert()" size="8" style="width: 100px;" value="0.50237"> β = v/c</span></td>
-<td style="border: none;"><span style="font-size:12pt"><input name="qrlu" onkeyup="qrluconvert()" size="8" style="width: 100px;" value="0.04562"> r.l.u</span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="qrlu" onkeyup="qrluconvert()" size="8" style="width: 100px;" value="0.04562"> r.l.u.</span></td>
 </tr>
 <tr>
 <td style="border: none;"><span style="font-size:12pt"><input name="gamma" onkeyup="gammaconvert()" size="8" style="width: 100px;" value="1.15653"> γ</span></td>
+<td style="border: none;"><span style="font-size:12pt"><input name="degrees" onkeyup="degreeconvert()" size="8" style="width: 100px;" value="0.02865"> degrees</span></td>
 </tr>
 </tbody></form>
 <script>
@@ -231,11 +232,13 @@ alatt.value = roundfive(alatt.value);
 }}
 function mradconvert(){
 with (document.conversion){
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qCrys.value = kCrys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qCrys.value = roundfive(qCrys.value);
 qAng.value  = roundfive(qAng.value);
@@ -246,25 +249,30 @@ alatt.value = roundfive(alatt.value);
 function qPhysconvert(){
 with (document.conversion){
 mrad.value = (1e3)*2*Math.asin(0.5*qPhys.value/kPhys.value);
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qCrys.value = kCrys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qCrys.value = roundfive(qCrys.value);
 qAng.value  = roundfive(qAng.value);
 qnm.value   = roundfive(qnm.value);
 qrlu.value  = roundfive(qrlu.value);
 alatt.value = roundfive(alatt.value);
+degrees.value = roundfive(degrees.value);
 }}
 function qCrysconvert(){
 with (document.conversion){
 mrad.value = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qAng.value  = 1.00/qCrys.value;
 qnm.value   = qAng.value /10.0;
 qrlu.value = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qAng.value  = roundfive(qAng.value);
 qnm.value   = roundfive(qnm.value);
@@ -275,10 +283,12 @@ function qAngconvert(){
 with (document.conversion){
 qCrys.value = 1.00/qAng.value;
 mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qnm.value   = qAng.value /10.0;
 qrlu.value  = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qCrys.value = roundfive(qCrys.value);
 qnm.value   = roundfive(qnm.value);
@@ -290,9 +300,11 @@ with (document.conversion){
 qAng.value  = qnm.value*10.0;
 qCrys.value = 1.00/qAng.value;
 mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qrlu.value  = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qCrys.value = roundfive(qCrys.value);
 qAng.value  = roundfive(qAng.value);
@@ -304,9 +316,11 @@ with (document.conversion){
 qAng.value  = alatt.value/qrlu.value;
 qCrys.value = 1.00/qAng.value;
 mrad.value  = (1e3)*2*Math.asin(0.5*qCrys.value/kCrys.value);
+degrees.value = mrad.value*1e-3*180.0/Math.PI;
 qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
 qnm.value   = qAng.value /10.0;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qCrys.value = roundfive(qCrys.value);
 qAng.value  = roundfive(qAng.value);
@@ -316,11 +330,28 @@ function alattconvert(){
 with (document.conversion){
 qrlu.value  = alatt.value/qAng.value;
 mrad.value  = roundfive(mrad.value);
+degrees.value = roundfive(degrees.value);
 qPhys.value = roundfive(qPhys.value);
 qCrys.value = roundfive(qCrys.value);
 qAng.value  = roundfive(qAng.value);
 qnm.value   = roundfive(qnm.value);
 qrlu.value  = roundfive(qrlu.value);
+}}
+function degreeconvert(){
+with (document.conversion){
+mrad.value = (1e3)*degrees.value*Math.PI/180.0;
+qPhys.value = kPhys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
+qCrys.value = kCrys.value*2.0*Math.sin(0.5*mrad.value*(1e-3));
+qAng.value  = 1.00/qCrys.value;
+qnm.value   = qAng.value /10.0;
+qrlu.value = alatt.value/qAng.value;
+mrad.value  = roundfive(mrad.value);
+qPhys.value = roundfive(qPhys.value);
+qCrys.value = roundfive(qCrys.value);
+qAng.value  = roundfive(qAng.value);
+qnm.value   = roundfive(qnm.value);
+qrlu.value  = roundfive(qrlu.value);
+alatt.value = roundfive(alatt.value);
 }}
 </script>
 </table></body></html>
