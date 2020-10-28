@@ -1,7 +1,7 @@
 ---
-title: 'Converting between Kinetic Energy, Momentum, and Angles with Relativistic Electrons'
+title: 'Useful Calculator for the Diffraction Kinematics of Relativistic Electrons'
 date: 2020-10-12
-permalink: /posts/2020/10/relativistic-electron-conversion/
+permalink: /posts/2020/10/relativistic-electron-kinematics/
 tags:
   - electron beam 
   - widget
