@@ -33,16 +33,14 @@
 </tr>
 <tr>
 <td style="border: none;" colspan="2"><span style="font-size:12pt"><input name="formulaPerCell" size="8" style="width: 50px;" value="2"></span></td>  
-<td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="radio" id="useVolume" name="mode" value="volume" onclick="checkMode()" checked>
-<label for="volume">Use Unit Cell Volume</label></span></td>
 </tr>
 <tr>
-<td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="button" style="font-size : 15px; width: 60%; height: 30px; background-color: #f2f2f2;" value="Calculate IMFP" onclick="run()"></span></td>
+<td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="radio" id="useVolume" name="mode" value="volume" onclick="checkMode()" checked>
+<label for="volume">Use Unit Cell Volume</label></span></td>
 <td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="radio" id="useMass" name="mode" value="mass" onclick="checkMode()">
 <label for="Mass">Use Mass Density</label></span></td>
 </tr>
-<tr>
-</tr>
+<tr><td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="button" style="font-size : 15px; width: 60%; height: 30px; background-color: #f2f2f2;" value="Calculate IMFP" onclick="run()"></span></td></tr>
 </tbody></form>
 </table>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
