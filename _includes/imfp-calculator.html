@@ -884,7 +884,7 @@ var step = (stop-start)/pts;
 for (var i=0; i<pts; i++){
 arr.push(start + (step * i));
 }
-return arr
+return arr;
 }
 function npsum(arr) {
 var total = 0;
@@ -892,10 +892,10 @@ var L = arr.length;
 for (var i = 0; i < L; i++) {
 total = total + arr[i];
 }
-return total
+return total;
 }
 function len(arr){
-return arr.length
+return arr.length;
 }
 function norm(arr){
 total = npsum(arr);
@@ -903,11 +903,11 @@ var L = arr.length;
 for (var i = 0; i < L; i++) {
 arr[i] = arr[i]/total;
 }
-return arr
+return arr;
 }
 function roundfive(num){
 round = (Math.round(num*100000))/100000;
-return (+round.toFixed(5))
+return (+round.toFixed(5));
 }
 function checkFormula(){
 with (document.imfpCalc){
@@ -922,8 +922,8 @@ if(parse.length<2){parse[1]=1;}
 parse[1] = parseFloat(parse[1]);
 var atomName = parse[0];
 var numAtoms = parse[1]; 
-if(numAtoms==1){formattedFormula = formattedFormula + atomName}
-else{formattedFormula = formattedFormula + atomName+ '<sub>' + numAtoms + '</sub>'}
+if(numAtoms==1){formattedFormula = formattedFormula + atomName;}
+else{formattedFormula = formattedFormula + atomName+ '<sub>' + numAtoms + '</sub>';}
 }
 }  
 document.getElementById('parsed').innerHTML = formattedFormula;
@@ -1001,14 +1001,14 @@ Em = 7.6*Zef**0.36;
 LiM=106*F*E0/Em/Math.log(2*bstar*E0/Em);
 Em = 42.5*Zef**0.47*rho/Aef;
 LiJL=106*F*E0/Em/Math.log(2*bstar*E0/Em);
-output = {'LiI':LiI, 'LiI2':LiI2, 'LiM':LiM, 'LiJL':LiJL}
-return output[method]
+output = {'LiI':LiI, 'LiI2':LiI2, 'LiM':LiM, 'LiJL':LiJL};
+return output[method];
 }
 function parseFormula(formula,cellVolume,formulaUnits,debug){
 formula = formula.replace(/[^a-z 0-9\.]+/gi, '');
 formula = formula.split(' ').filter(Boolean);
-if(debug == null){debug=false}
-if(formulaUnits == null){formulaUnits=1}
+if(debug == null){debug=false;}
+if(formulaUnits == null){formulaUnits=1;}
 var atoms = {};
 var totalNumAtoms = 0;
 var totalMass = 0;
@@ -1027,13 +1027,13 @@ try {
 var check = PeriodicTable[atomName]['Z'];
 }
 catch(err) {
-return 'Error'
+return 'Error';
 }
 atoms[atomName] = {'numAtoms':0, 'frac':0, 'Z': PeriodicTable[atomName]['Z'], 'M':PeriodicTable[atomName]['mass']};
 totalNumAtoms = totalNumAtoms + numAtoms;
 totalMass = totalMass + numAtoms*PeriodicTable[atomName]['mass'];
-if(numAtoms==1){formattedFormula = formattedFormula + atomName}
-else{formattedFormula = formattedFormula + atomName+ '<sub>' + numAtoms + '</sub>'}
+if(numAtoms==1){formattedFormula = formattedFormula + atomName;}
+else{formattedFormula = formattedFormula + atomName+ '<sub>' + numAtoms + '</sub>';}
 }
 for(var a in formula){
 var parse = formula[a].match(/[\d\.]+|\D+/g);
@@ -1050,8 +1050,8 @@ Z.push(atoms[atomName]['Z']);
 A.push(atoms[atomName]['M']);
 frac.push(atoms[atomName]['frac']);
 }
-if(debug){console.log(atoms)}
-return {'Z':Z, 'A':A, 'frac':frac, 'formula':formula.join(''), 'formattedFormula':formattedFormula, 'rho':1.6605*formulaUnits*totalMass/cellVolume, 'totalMass':totalMass}
+if(debug){console.log(atoms);}
+return {'Z':Z, 'A':A, 'frac':frac, 'formula':formula.join(''), 'formattedFormula':formattedFormula, 'rho':1.6605*formulaUnits*totalMass/cellVolume, 'totalMass':totalMass};
 }
 function makePlot(parsed,upper){
 compound = parsed['formattedFormula'];
