@@ -36,15 +36,15 @@
 </tr>
 <tr>
 <td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="radio" id="useVolume" name="mode" value="volume" onclick="checkMode()" checked>
-<label for="volume">Use Unit Cell Volume</label></span></td>
+<label for="useVolume">Unit Cell Volume Mode</label></span></td>
 <td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="radio" id="useMass" name="mode" value="mass" onclick="checkMode()">
-<label for="Mass">Use Mass Density</label></span></td>
+<label for="useMass">Mass Density Mode</label></span></td>
 </tr>
 <tr><td style="border: none;" colspan="2"><span style="font-size:12pt"><input type="button" style="font-size : 15px; width: 60%; height: 30px; background-color: #f2f2f2;" value="Calculate IMFP" onclick="run()"></span></td></tr>
 </tbody></form>
 </table>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="plot" style="width:600px;height:500px;"></div>
+<div id="plot" style="width:100%;height:83%;"></div>
 <script>
 var PeriodicTable={  
 'H':{  
@@ -1087,7 +1087,7 @@ hovertemplate: '%{y:.1f} nm',
 };
 var data = [LiM,LiI2];
 var layout = {
-title: 'IMFP vs Energy for '+compound,
+title: 'IMFP vs Energy<br>of '+compound,
 showlegend: false,
 colorway : ['#182844', '#182844', '#cd7eaf', '#a262a9', '#6f4d96', '#3d3b72', '#182844'],
 font: {
@@ -1119,7 +1119,7 @@ tickwidth: 1,
 tickcolor: '#000'
 }
 };
-Plotly.newPlot(myPlot, data, layout, {scrollZoom: true, editable: true, displayModeBar: true, displaylogo: false});
+Plotly.newPlot(myPlot, data, layout, {scrollZoom: false, editable: true, displayModeBar: true, displaylogo: false, toImageButtonOptions:{'format': 'svg','filename':'IMFP_'+parsed['formula'],'height':800, 'width':600}});
 }
 function run(){
 formula = document.imfpCalc.inputFormula.value;
