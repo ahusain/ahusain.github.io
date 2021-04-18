@@ -965,18 +965,21 @@ addFields(atoms,formula);
 }
 function addFields(atoms,formula){
 var container = document.getElementById("container");
+var total = 1;
+try{total = document.getElementsByName("FullCompound")[0].value;}
+catch(err){}
 while (container.hasChildNodes()) {container.removeChild(container.lastChild);}
 var label = "grams of "+checkFormula();
 var input = document.createElement("input");
 input.type = "text";
 input.name = "FullCompound";
 input.id = formula;
-input.value = 1.0;
+input.value = total;
 input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt;";
+mylabel.style="font-size:12pt";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -998,7 +1001,7 @@ input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt;margin-left:3px;";
+mylabel.style="font-size:12pt";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -1029,11 +1032,12 @@ input.type = "text";
 input.name = atom1+":"+atom2;
 input.id = formula+atom1+":"+atom2;
 input.value = roundfive(atoms[atom1]["frac"]+atoms[atom2]["frac"]);
+if(mode=="millimoles"){input.value = roundfive(atoms[atom1]["frac"]/num1);}
 input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt;margin-left:3px;";
+mylabel.style="font-size:12pt";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -1060,6 +1064,7 @@ var combined_frac = atoms[atom1]["frac"]+atoms[atom2]["frac"];
 var num1 = atoms[atom1]["numAtoms"];
 var num2 = atoms[atom2]["numAtoms"];
 var combined_name = atom1+":"+atom2;
+if(mode=="millimoles"){combined_frac = roundfive(atoms[atom1]["frac"]/num1);}
 document.getElementById(formula+atom1+":"+atom2).value = roundfive(total*combined_frac);
 }
 }
@@ -1084,6 +1089,7 @@ var num1 = atoms[atom1]["numAtoms"];
 var num2 = atoms[atom2]["numAtoms"];
 var combined_name = atom1+":"+atom2;
 if(combined_name==changed){continue;}
+if(mode=="millimoles"){combined_frac = roundfive(atoms[atom1]["frac"]/num1);}
 document.getElementById(formula+atom1+":"+atom2).value = roundfive(total*combined_frac);
 }
 }
@@ -1104,6 +1110,7 @@ var combined_frac = atoms[atom1]["frac"]+atoms[atom2]["frac"];
 var num1 = atoms[atom1]["numAtoms"];
 var num2 = atoms[atom2]["numAtoms"];
 var combined_name = atom1+":"+atom2;
+if(mode=="millimoles"){combined_frac = roundfive(atoms[atom1]["frac"]/num1);}
 document.getElementById(formula+atom1+":"+atom2).value = roundfive(total*combined_frac);
 }
 }
