@@ -1,20 +1,26 @@
 <html>
 <head>
 <body>
-<table style="border-width:0px" cellpadding="4" bordercolor="black" align="center">
+<table style="border-width:0px; table-layout: fixed;" cellpadding="4" bordercolor="black" align="center">
 <form name="MassFracCalc">
 <tbody>
 <tr>
-<td style="border: none;" colspan="2" class="label"><span style="font-size:15pt"><b>Input Formula</b></span></td> 
+<td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Input Formula</b></span></td> 
 <td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Parsed Formula</b></span></td>
 </tr>
 <tr>
-<td style="border: none;" colspan="2"><span style="font-size:12pt"><input name="inputFormula" onkeyup="reviseFormula(event)" size="8" style="width: 200px;" value="La2 Cu O4"> </span></td>
-<td style="border: none;" colspan="2"><span style="font-size:12pt"><p id="parsed">La<sub>2</sub>CuO<sub>4</sub></p> </span></td>
+<td style="border: none;" colspan="1"><span style="font-size:12pt"><input name="inputFormula" onkeyup="reviseFormula(event)" size="8" style="width: 200px;" value="La2 Cu O4"> </span></td>
+<td style="border: none;" colspan="1" align="left"><span style="font-size:12pt"><p id="parsed">La<sub>2</sub>CuO<sub>4</sub></p> </span></td>
+</tr>
+<tr>
+<td style="border: none;" colspan="1"><span style="font-size:12pt"><input type="radio" id="useGrams" name="mode" value="grams" onclick="checkMode()" checked>
+<label for="useGrams">grams</label></span></td>
+<td style="border: none;" colspan="1"><span style="font-size:12pt"><input type="radio" id="useMoles" name="mode" value="millimoles" onclick="checkMode()">
+<label for="useMoles">moles</label></span></td>
 </tr>
 </tbody></form>
 </table>
-<table id="container" style="border-width:0px" cellpadding="4" bordercolor="black" align="center">
+<table id="container" style="border-width:0px; table-layout: fixed;" cellpadding="4"  bordercolor="black" align="center">
 </table>
 <script>
 var PeriodicTable={  
@@ -845,6 +851,7 @@ var PeriodicTable={
 'group': 18,
 }
 };
+var mode="grams";
 function capitalize(string) {
 var str = string.toLowerCase();
 return str.charAt(0).toUpperCase() + str.slice(1);
@@ -879,6 +886,11 @@ return arr;
 function roundfive(num){
 round = (Math.round(num*100000))/100000;
 return (+round.toFixed(5));
+}
+function checkMode(){
+if(document.getElementById('useGrams').checked){mode="grams";}
+if(document.getElementById('useMoles').checked){mode="millimoles";}
+reviseFormula();
 }
 function checkFormula(){
 with (document.MassFracCalc){formula = inputFormula.value;}
@@ -940,7 +952,8 @@ parse[1] = parseFloat(parse[1]);
 var atomName = parse[0];
 var numAtoms = parse[1]; 
 atoms[atomName]['numAtoms'] = atoms[atomName]['numAtoms'] + numAtoms;
-atoms[atomName]['frac'] = atoms[atomName]['frac'] + (numAtoms*atoms[atomName]['M'])/(totalMass);
+if(mode=="grams"){atoms[atomName]['frac'] = atoms[atomName]['frac'] + (numAtoms*atoms[atomName]['M'])/(totalMass);}
+if(mode=="millimoles"){atoms[atomName]['frac'] = atoms[atomName]['frac'] + 1000*(numAtoms)/(totalMass);}
 }
 return atoms
 }
@@ -963,7 +976,7 @@ input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt";
+mylabel.style="font-size:12pt;";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -975,7 +988,7 @@ cell2.style="border: none;";
 cell2.colspan="1";
 cell2.appendChild(mylabel);
 for (var atom in atoms){
-var label = "grams of "+atom;
+var label = mode+" of "+atom;
 var input = document.createElement("input");
 input.type = "text";
 input.name = atom;
@@ -985,7 +998,7 @@ input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt";
+mylabel.style="font-size:12pt;margin-left:3px;";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -1010,7 +1023,7 @@ if(num1==1 && num2!=1){binary = atom1+atom2+String(num2).sub();}
 if(num1!=1 && num2==1){binary = atom1+String(num1).sub()+atom2;}
 if(num1!=1 && num2!=1) {binary = atom1+String(num1).sub()+atom2+String(num2).sub();}
 if(binary==formula.replace(/\s/g,'')){break;}
-var label = "grams of "+binary;
+var label = mode+" of "+binary;
 var input = document.createElement("input");
 input.type = "text";
 input.name = atom1+":"+atom2;
@@ -1020,7 +1033,7 @@ input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
 input.size="8"; input.style="width: 200px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
-mylabel.style="font-size:12pt";
+mylabel.style="font-size:12pt;margin-left:3px;";
 mylabel.align="left";
 var row = container.insertRow(-1);
 var cell1 = row.insertCell(0);
@@ -1099,3 +1112,4 @@ document.getElementById(formula+atom1+":"+atom2).value = roundfive(total*combine
 with (document.MassFracCalc){formula = inputFormula.value;}
 atoms = parseFormula(formula);
 addFields(atoms,formula);
+</script>

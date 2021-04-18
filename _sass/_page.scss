@@ -47,7 +47,12 @@
   font-family: $global-font-family;
   font-size: $type-size-4;
 }
-
+.page__content {
+  text-align: justify;
+}
+.sidebar__right {
+  text-align: left;
+}
 .page__content {
 
   h2 {
