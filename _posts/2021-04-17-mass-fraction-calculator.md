@@ -20,6 +20,6 @@ Some notes about the calculator:
 - Parentheses cannot be parsed. So, enter (H<sub>2</sub>O)<sub>2</sub> as "*H4 O2*", not "*(H2O)2*". 
 - Both integer and non-integer subscripts are valid, which means non-stoichometric compounds are acceptable.
 - Repeated elements are acceptable, but they will be added together.
-
+- When in mole mode, the moles of all binaries are the same because they are exactly equal to the moles of the full compound.
 This calculator was requested by my good friend and crystal grower Mohamed Oudah.
 {% include massfrac-calculator.html %}
