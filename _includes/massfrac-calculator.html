@@ -1,7 +1,7 @@
 <html>
 <head>
 <body>
-<table style="border-width:0px; table-layout: fixed;" cellpadding="4" bordercolor="black" align="center">
+<table style="border-width:0px; table-layout: auto;" cellpadding="4" bordercolor="black" align="center">
 <form name="MassFracCalc">
 <tbody>
 <tr>
@@ -9,7 +9,7 @@
 <td style="border: none;" colspan="1" class="label"><span style="font-size:15pt"><b>Parsed Formula</b></span></td>
 </tr>
 <tr>
-<td style="border: none;" colspan="1"><span style="font-size:12pt"><input name="inputFormula" onkeyup="reviseFormula(event)" size="8" style="width: 200px;" value="La2 Cu O4"> </span></td>
+<td style="border: none;" colspan="1"><span style="font-size:12pt"><input name="inputFormula" onkeyup="reviseFormula(event)" size="8" style="width: 150px;" value="La2 Cu O4"> </span></td>
 <td style="border: none;" colspan="1" align="left"><span style="font-size:12pt"><p id="parsed">La<sub>2</sub>CuO<sub>4</sub></p> </span></td>
 </tr>
 <tr>
@@ -20,7 +20,7 @@
 </tr>
 </tbody></form>
 </table>
-<table id="container" style="border-width:0px; table-layout: fixed;" cellpadding="4"  bordercolor="black" align="center">
+<table id="container" style="border-width:0px; table-layout: auto;" cellpadding="4"  bordercolor="black" align="center">
 </table>
 <script>
 var PeriodicTable={  
@@ -976,7 +976,7 @@ input.name = "FullCompound";
 input.id = formula;
 input.value = total;
 input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
-input.size="8"; input.style="width: 200px;font-size:12pt";
+input.size="8"; input.style="width: 150px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
 mylabel.style="font-size:12pt";
@@ -998,7 +998,7 @@ input.name = atom;
 input.id = formula+atom;
 input.value = roundfive(atoms[atom]["frac"]);
 input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
-input.size="8"; input.style="width: 200px;font-size:12pt";
+input.size="8"; input.style="width: 150px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
 mylabel.style="font-size:12pt";
@@ -1034,7 +1034,7 @@ input.id = formula+atom1+":"+atom2;
 input.value = roundfive(atoms[atom1]["frac"]+atoms[atom2]["frac"]);
 if(mode=="millimoles"){input.value = roundfive(atoms[atom1]["frac"]/num1);}
 input.onkeyup = function(event){reviseValues(event.target.name,atoms,formula);};
-input.size="8"; input.style="width: 200px;font-size:12pt";
+input.size="8"; input.style="width: 150px;font-size:12pt";
 var mylabel = document.createElement("LABEL");
 mylabel.innerHTML = label;
 mylabel.style="font-size:12pt";
