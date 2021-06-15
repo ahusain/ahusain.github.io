@@ -971,7 +971,7 @@ catch(err){}
 while (container.hasChildNodes()) {container.removeChild(container.lastChild);}
 var label = "grams of "+checkFormula();
 var input = document.createElement("input");
-input.type = "text";
+input.type = "number";
 input.name = "FullCompound";
 input.id = formula;
 input.value = total;
@@ -993,7 +993,7 @@ cell2.appendChild(mylabel);
 for (var atom in atoms){
 var label = mode+" of "+atom;
 var input = document.createElement("input");
-input.type = "text";
+input.type = "number";
 input.name = atom;
 input.id = formula+atom;
 input.value = roundfive(atoms[atom]["frac"]);
@@ -1028,7 +1028,7 @@ if(num1!=1 && num2!=1) {binary = atom1+String(num1).sub()+atom2+String(num2).sub
 if(binary==formula.replace(/\s/g,'')){break;}
 var label = mode+" of "+binary;
 var input = document.createElement("input");
-input.type = "text";
+input.type = "number";
 input.name = atom1+":"+atom2;
 input.id = formula+atom1+":"+atom2;
 input.value = roundfive(atoms[atom1]["frac"]+atoms[atom2]["frac"]);
